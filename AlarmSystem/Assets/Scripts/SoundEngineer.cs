@@ -6,6 +6,7 @@ public class SoundEngineer : MonoBehaviour
     [SerializeField] private AudioSource _audioSource;
 
     private const float VolumeSmoothTime = 0.1f;
+    Coroutine _coroutine;
 
     private void Awake()
     {
@@ -32,8 +33,12 @@ public class SoundEngineer : MonoBehaviour
 
     private void PlaySound(float targetVolume)
     {
-        StopAllCoroutines();
-        StartCoroutine(TowardsVolumeWhile(targetVolume));
+        if (_coroutine != null)
+        {
+            StopCoroutine(_coroutine);
+        }
+
+        _coroutine = StartCoroutine(TowardsVolumeWhile(targetVolume));
     }
 
     private IEnumerator TowardsVolumeWhile(float targetVolume)

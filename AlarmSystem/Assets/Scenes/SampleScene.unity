@@ -1670,7 +1670,6 @@ GameObject:
   - component: {fileID: 1486243475}
   - component: {fileID: 1486243474}
   - component: {fileID: 1486243473}
-  - component: {fileID: 1486243477}
   - component: {fileID: 1486243479}
   - component: {fileID: 1486243478}
   m_Layer: 0
@@ -1766,20 +1765,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1486243477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486243472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c3dc1230154d44588a619cd45f4d9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _zoner: {fileID: 1594355558}
-  _soundEngineer: {fileID: 1486243479}
 --- !u!82 &1486243478
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1955,6 +1940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c9a2879b23f464bb0a06287a5d4cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _soundEngineer: {fileID: 1486243479}
 --- !u!1 &1717957668
 GameObject:
   m_ObjectHideFlags: 0
